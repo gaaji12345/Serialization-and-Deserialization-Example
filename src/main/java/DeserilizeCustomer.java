@@ -1,15 +1,18 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.File;
+import java.io.IOException;
+
 public class DeserilizeCustomer {
     public static void main(String[] args) {
-//        ObjectMapper mapper = new ObjectMapper();
-//        try {
-//            Employee employee = mapper.readValue(new File("employee.json"), Employee.class);
-//            System.out.println("Employee deserialized from 'employee.json'");
-//            System.out.println(employee);
-//        }catch (IOException e){
-//            e.printStackTrace();
-//        }
-//    }
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            Customer customer = mapper.readValue(new File("customer.json"), Customer.class);
+            System.out.println("Customer deserialized from 'customer.json'");
+            System.out.println(customer);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
-}
+    }
+
